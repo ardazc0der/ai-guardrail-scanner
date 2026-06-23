@@ -16,22 +16,24 @@ An automated, GUI-based AI Red Teaming tool designed to test Large Language Mode
 - Time & Random Modules
 
 ## 🛠️ How to Run
-1. Make sure you have Python installed.
-2. Run the following command in your terminal:
+
+1. Make sure you have Python installed on your system.
+2. Clone this repository or download the `arena.py` file.
+3. Open your terminal or command prompt, navigate to the file directory, and run the following command:
+
 ```bash
 python arena.py
 
+Last Information;
 
-LAST INFORMATION
+---
 
+### 📝 Summary
 
-## 🔍 Real-World Guardrail Landscape
+This project is a simple simulation tool to understand how modern AI models protect themselves from prompt injections. 
 
-This tool is designed to simulate attack vectors against the two primary types of AI safety systems found in industry-leading LLMs:
+It demonstrates two main security types used by top AI models:
+- **Input Filters:** Stopping bad words before the AI processes them (like **OpenAI GPT-4o** and **Azure AI** systems).
+- **Output Alignment:** The AI understands the question but refuses to answer due to safety rules (like **Anthropic Claude** and **Google Gemini**).
 
-1. **Input Filtering (Prompt Shielding):** - Found in models like **OpenAI's GPT-4o (via Moderation API)** and **Microsoft Azure AI Content Safety**.
-   - These systems intercept the prompt *before* it reaches the model core. Our tool simulates this by catching keywords like `"password"` or `"leak"` instantly.
-
-2. **Output Alignment (Reinforcement Learning - RLHF):**
-   - Found in models like **Anthropic's Claude 3.5 Sonnet** and **Google's Gemini 1.5 Pro**.
-   - These models process the prompt but refuse to comply during generation (e.g., *"I cannot fulfill this request"*). Our tool tracks these via the simulated `Target AI Response` log.
+*This tool is created for educational purposes and AI Red Teaming research.*
